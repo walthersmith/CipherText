@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherText</title>
+    <link rel="stylesheet" type="text/css" href="src/css/cipherTextStyle.css">
+    <link rel="stylesheet" type="text/css" href="src/css/general.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header_title">CipherText</h1>
+    </header>
+    <main class="main">
+        <h2 class="main__title">Cipher your messages and share with yours friends</h2>
+        <textarea class="main__textArea" name="main_textarea" id="txtMessage" placeholder="Enter your text here :)"></textarea>
+        <p class="main__message">Characters without accents</p>
+        <div class="main__btnGroup">
+            <button onclick="encryptText()" class="btn__encrypt" id="btnEncrypt">Encrypt text</button>
+            <button class="main__round"></button>
+            <button onclick="decryptText()" class="btn__decrypt" id="btnEncrypt">Decrypt text</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Made with ❤️ by Sorca</p>
+    </footer>
+    <script src="src/js/cipherText.js"></script>
+</body>
+</html>

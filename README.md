@@ -15,8 +15,8 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 
 ## Functionalities
 (This is a work in progress, so finished features will be marked with ✅)
-- [ ] Encrypt text
-- [ ] Decrypt text
+- [✅] Encrypt text
+- [✅ ] Decrypt text
 - [ ] Share encrypted/decrypted text
 - [ ] Generate encryption keys
 - [ ] Dark mode
