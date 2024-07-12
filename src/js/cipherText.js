@@ -5,25 +5,25 @@
  * @date 2024-07-11
  * @license MIT License
  */
+import { updateCharCount } from './utils.js';
 
 
-
-function encryptText() {    
-    splittedText = splitInWords();
-    encryptedText = [];
-    splittedText.forEach(element => {
+function encryptText() {     
+    let encryptedText = [];
+    splitInWords().forEach(element => {
         encryptedText.push(encrypt(element))
     });
     document.getElementById('txtMessage').value = encryptedText.join(' ');
+    updateCharCount();
 }
 
-function decryptText() {    
-    splittedText = splitInWords();
-    encryptedText = [];
-    splittedText.forEach(element => {
+function decryptText() {     
+    let encryptedText = [];
+    splitInWords().forEach(element => {
         encryptedText.push(decrypt(element))
     });
     document.getElementById('txtMessage').value = encryptedText.join(' ');
+    updateCharCount();
 }
 
 function validateText(text) {
@@ -37,7 +37,7 @@ function splitInWords() {
 }
 
 function encrypt(word){    
-    encryptedWord = []
+    let encryptedWord = []
     for (let i = 0; i < word.length; i++) {
         encryptedWord.push(cipherRules(word[i]));
     }
@@ -66,7 +66,7 @@ function cipherRules(letter){
  */
 function decrypt(word){    
     let encryptedWord = Array.from(word)
-    rules = {'enter':"e",'imes':'i','ai':'a','ober':'o','ufat':'u'};
+    let rules = {'enter':"e",'imes':'i','ai':'a','ober':'o','ufat':'u'};
     Object.entries(rules).forEach(([key, value]) => { 
         // word = word.replace(RegExp(key,'g'),value);
         let position = 0;
@@ -78,12 +78,9 @@ function decrypt(word){
             encryptedWord.splice(position,key.length,value);
             position += value.length;
         }
-
     });
 
     return encryptedWord.join('');
 }
-
-
-
-
+ 
+export { encryptText, decryptText, encrypt, decrypt };

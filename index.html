@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CipherText</title>
-    <link rel="stylesheet" type="text/css" href="src/css/cipherTextStyle.css">
+    <script src="https://kit.fontawesome.com/ab5a4ef765.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="src/css/general.css">
+    <link rel="stylesheet" type="text/css" href="src/css/cipherTextStyle.css">
 </head>
 <body>
     <header class="header">
-        <h1 class="header_title">CipherText</h1>
+        <h1 class="header_title ">CipherText</h1>
     </header>
     <main class="main">
-        <h2 class="main__title">Cipher your messages and share with yours friends</h2>
-        <textarea class="main__textArea" name="main_textarea" id="txtMessage" placeholder="Enter your text here :)"></textarea>
+        <h2 class="main__title ">Cipher your messages and share with yours friends</h2>
+        <div class="textarea-container">
+            <textarea class="main__textArea" name="main_textarea" id="txtMessage" placeholder="Enter your text here :)"></textarea>
+            <button class="copy-btn" onclick="copyText()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg></button>
+            <div id="charCount" class="char-count">0</div>
+            <div id="notification" class="notification"></div>
+        </div>
         <p class="main__message">Characters without accents</p>
         <div class="main__btnGroup">
-            <button onclick="encryptText()" class="btn__encrypt" id="btnEncrypt">Encrypt text</button>
-            <button class="main__round"></button>
-            <button onclick="decryptText()" class="btn__decrypt" id="btnEncrypt">Decrypt text</button>
+            <button class="btn__encrypt btn btn--yellow experiment-title" id="btnEncrypt">
+                <span class="btn__txt">Encrypt text</span>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+            </button>
+            <button class="main__round"  id="downloadBtn" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></button>
+            <button class="btn__decrypt btn btn--green" id="btnDecrypt">
+                <span class="btn__txt">Decrypt text</span>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+                <i class="btn__bg" aria-hidden="true"></i>
+            </button>
         </div>
     </main>
     <footer class="footer">
         <p>Made with ❤️ by Sorca</p>
     </footer>
-    <script src="src/js/cipherText.js"></script>
+    <!-- <script src="src/js/cipherText.js"></script>   -->
+    <script type="module" src="src/js/main.js"></script>      
 </body>
 </html>

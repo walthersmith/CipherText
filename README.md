@@ -16,12 +16,12 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 ## Functionalities
 (This is a work in progress, so finished features will be marked with ✅)
 - [✅] Encrypt text
-- [✅ ] Decrypt text
+- [✅] Decrypt text
+- [✅] Download texts as files
 - [ ] Share encrypted/decrypted text
 - [ ] Generate encryption keys
 - [ ] Dark mode
 - [ ] History of encrypted/decrypted texts
-- [ ] Download texts as files
 - [ ] Mobile optimization
 - [ ] Integrity verification
 
