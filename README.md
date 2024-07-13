@@ -27,7 +27,7 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 
 
 ## Live Demo
-Check out CipherText in action! [Live Demo](#)
+Check out CipherText in action! [Live Demo](https://walthersmith.github.io/CipherText/)
 
 ## Installation and Usage Instructions
 1. Clone the repository:
