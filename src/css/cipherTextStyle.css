@@ -382,10 +382,11 @@ h1 {
   .textarea-container {
     display: flex;
     align-items: center;
+    
   }
   .main__textArea{ 
     width: 100%;
-    height: 412px;
+    height: 25vh;
   }
   .main__btnGroup{
     display: flex;
@@ -396,12 +397,7 @@ h1 {
   .main__round{
     display: none;
   }
-  .btn__encrypt{
-    /* font-size:2rem ; */
-  }
-  .btn__decrypt{
-    /* font-size:2rem ; */
-  }
+
   .footer{
     min-height: 5px; 
     
