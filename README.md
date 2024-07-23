@@ -18,10 +18,11 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 - [✅] Encrypt text
 - [✅] Decrypt text
 - [✅] Download texts as files
-- [✅ ] Mobile optimization
+- [✅] Mobile optimization
+- [✅] Dark mode
+- [✅] Copy Button
 - [ ] Share encrypted/decrypted text
 - [ ] Generate encryption keys
-- [ ] Dark mode
 - [ ] History of encrypted/decrypted texts
 - [ ] Integrity verification
 
