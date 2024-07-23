@@ -1,6 +1,6 @@
-![Project Logo](CipherText.png)
+<!-- ![Project Logo](CipherText.png) -->
+# CipherText!
 
----
 Welcome to CipherText! 🎉 This is a web application for encrypting and decrypting texts, allowing you to exchange secret messages with your friends. 
 
 ## Features ✨
