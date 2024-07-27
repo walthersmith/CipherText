@@ -1,5 +1,5 @@
 import { encryptText, decryptText, encrypt, decrypt } from './cipherText.js';
-import { isEmpty,notification } from './utils.js';
+import { isEmpty,notification,existSpecialCharacters,existAccentedCharacters } from './utils.js';
 
 class TextScramble {
     constructor(el) {
@@ -15,8 +15,8 @@ class TextScramble {
         this.queue = Array.from({length}, (_, i) => ({
           from: oldText[i] || '',
           to: newText[i] || '',
-          start: Math.floor(Math.random() * 40),
-          end: Math.floor(Math.random() * 40) + 40
+          start: Math.floor(Math.random() * 5),
+          end: Math.floor(Math.random() * 5) + 5
         }));
         cancelAnimationFrame(this.frameRequest);
         this.frame = 0;
@@ -55,23 +55,46 @@ class TextScramble {
     }
 
     async startScramble(isEncrypt = true) {
-        const originalText = this.el.value;
-        let processedText;
-        if(!isEmpty(originalText)){
-            if (isEncrypt) {
-                encryptText(); 
-                processedText = this.el.value;
-            } else {
-                decryptText(); 
-                processedText = this.el.value;
-            }    
-            await this.setText('_'.repeat(originalText.length));
-            await new Promise(resolve => setTimeout(resolve, 100));
-            await this.setText(processedText);
-        }else{
-            notification("notification",'⚠️ Please enter some text','showError');
+      const originalText = this.el.value;
+      let processedText;
+      if(!isEmpty(originalText)){ 
+        if(existSpecialCharacters(originalText)){
+          notification("notification",'⚠️ Please enter only letters','showError');
+          return;
         }
+        if(existAccentedCharacters(originalText)){
+          notification("notification",'⚠️ Please enter letters without accents','showError');
+          return;
+        }
+        
+
+          const encryptButton = document.getElementById('btnEncrypt');
+          const decryptButton = document.getElementById('btnDecrypt');
+
+          // Disable both buttons
+          encryptButton.disabled = true;
+          decryptButton.disabled = true;
+
+          if (isEncrypt) {
+              encryptText(); 
+              processedText = this.el.value;
+          } else {
+              decryptText(); 
+              processedText = this.el.value;
+          }    
+          await this.setText('_'.repeat(originalText.length));
+          await new Promise(resolve => setTimeout(resolve, 100));
+          await this.setText(processedText);
+
+          // Re-enable both buttons after the operation is complete
+          encryptButton.disabled = false;
+          decryptButton.disabled = false;
+      } else {
+          notification("notification",'⚠️ Please enter some text','showError');
       }
+      enableButtons();
+  }
+ 
   }
   
   const initTextScramble = (textareaId, encryptButtonId, decryptButtonId) => {

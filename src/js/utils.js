@@ -27,6 +27,14 @@ function updateCharCount() {
     charCount.textContent = `${currentLength}`;
 }
 
+function existSpecialCharacters(text){
+    return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(text);
+}
+
+function existAccentedCharacters(text) {
+    return /[áàâäãåāăąéèêëēĕėęěíìîïīįıóòôöõøōőœúùûüūůűųýÿŷÁÀÂÄÃÅĀĂĄÉÈÊËĒĔĖĘĚÍÌÎÏĪĮIÓÒÔÖÕØŌŐŒÚÙÛÜŪŮŰŲÝŸŶ]/.test(text);
+}
+
 
 
 function downloadEncryptedText() {
@@ -50,4 +58,9 @@ function downloadEncryptedText() {
     URL.revokeObjectURL(url);
 }
 
-export {isEmpty,notification,updateCharCount,downloadEncryptedText };
+export {isEmpty,
+    notification,
+    updateCharCount,
+    downloadEncryptedText,
+    existSpecialCharacters,
+    existAccentedCharacters };

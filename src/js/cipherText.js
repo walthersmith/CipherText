@@ -5,7 +5,7 @@
  * @date 2024-07-11
  * @license MIT License
  */
-import { updateCharCount} from './utils.js';
+import { updateCharCount,existSpecialCharacters} from './utils.js';
 
 
 function encryptText() {     
