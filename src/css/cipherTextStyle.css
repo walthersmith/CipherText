@@ -36,6 +36,7 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 20vh;
+  /* border-bottom: 1px solid var(--secondary-color); */
 }
 .main__title {
     color: var(--secondary-color);
@@ -43,19 +44,19 @@ h1 {
 
 .main {
   display: flex;
+  height: 77vh; 
   flex-direction: column;
   align-items: center;   
-  height: 78vh; 
   width: 100%;
   gap: 1em;
+  /* border: 1px solid red; */
 }
 
 .footer {
   display: flex;
-  position: fixed;
-  bottom: 0px;
+  height: 3vh;
   justify-content: center;
-  box-sizing: border-box;
+  align-items: center;
   background-color: #3D3D3D;
   color: #fef9ef;
   width: 100%; 
@@ -370,8 +371,8 @@ textarea::selection {
 
   .main {
     height: 77vh;
-    width: auto;
-    padding: 10px;
+    /* width: auto; */
+    /* padding: 10px; */
     text-align: center;
     box-sizing: content-box; 
   }
@@ -379,10 +380,10 @@ textarea::selection {
   .textarea-container {
     display: flex;
     align-items: center;
-    width: 100%;
-
+    width: 90%;
+    
   }
-
+  
   .main__textArea { 
     width: 100%;
     height: 35vh;
@@ -401,8 +402,6 @@ textarea::selection {
 
   .footer {
     height: 3vh;
-    /* position: fixed; */
-    /* bottom: 0; */
     align-items: center;
   }
 }
@@ -415,6 +414,18 @@ textarea::selection {
   .footer {
     position: relative;
     bottom: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .header_title {
+    font-size: 3rem;
+  }
+  .main {
+    padding: 0;
+  }
+  .textarea-container{
+    width: 95%;
   }
 }
 
