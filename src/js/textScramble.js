@@ -92,7 +92,6 @@ class TextScramble {
       } else {
           notification("notification",'⚠️ Please enter some text','showError');
       }
-      enableButtons();
   }
  
   }

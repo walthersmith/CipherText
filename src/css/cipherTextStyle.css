@@ -1,79 +1,6 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-/* Variables */
-
-/* Variables */
-:root {
-    /* Light mode colors */
-    --primary-color-light: #fef9ef;
-    --secondary-color-light: #3D3D3D;
-    --white-light: #FFFFFF;
-    --yellow-light: #FFD787;
-    --pink-light: #fa9988;
-    --green-light: #BEF0CD;
-    --red-light: #fc7d7d;
-    --purple-light: #BFA1FF;
-    --light-blue-light: #19dcea;
-    --dark-purple-light: #b22cff;
-    --selection-bg-light: #BFA1FF;
-    --btn-outline-light: hsl(calc(var(--hue) + 90), 98%, 80%);
-    --btn-bg-light: hsl(var(--hue), 98%, 80%);
-    --hover-bg-light: hsl(200 100% 80%);
-  
-    /* Dark mode colors */
-    --primary-color-dark: #1a1a1a;
-    --secondary-color-dark: #eeeeee;
-    --white-dark: #2c2c2c;
-    --yellow-dark: #8b6e2f;
-    --pink-dark: #a85a4a;
-    --green-dark: #2a7d5f;
-    --red-dark: #b33e3e;
-    --purple-dark: #6b4e99;
-    --light-blue-dark: #0a6b7a;
-    --dark-purple-dark: #6b1b99;
-    --selection-bg-dark: #6b4e99;
-    --btn-outline-dark: hsl(calc(var(--hue) + 90), 30%, 40%);
-    --btn-bg-dark: hsl(var(--hue), 30%, 40%);
-    --hover-bg-dark: hsl(200, 30%, 40%);
-  
-    /* Default to light mode */
-    --primary-color: var(--primary-color-light);
-    --secondary-color: var(--secondary-color-light);
-    --white: var(--white-light);
-    --yellow: var(--yellow-light);
-    --pink: var(--pink-light);
-    --green: var(--green-light);
-    --red: var(--red-light);
-    --purple: var(--purple-light);
-    --light-blue: var(--light-blue-light);
-    --dark-purple: var(--dark-purple-light);
-    --selection-bg: var(--selection-bg-light);
-    --btn-outline: var(--btn-outline-light);
-    --btn-bg: var(--btn-bg-light);
-    --hover-bg: var(--hover-bg-light);
-    transition: background-color 0.5s ease;
-  }
-  
-  /* Dark mode */
-.dark-mode {
-      --primary-color: var(--primary-color-dark);
-      --secondary-color: var(--secondary-color-dark);
-      --white: var(--white-dark);
-      --yellow: var(--yellow-dark);
-      --pink: var(--pink-dark);
-      --green: var(--green-dark);
-      --red: var(--red-dark);
-      --purple: var(--purple-dark);
-      --light-blue: var(--light-blue-dark);
-      --dark-purple: var(--dark-purple-dark);
-      --selection-bg: var(--selection-bg-dark);
-      --btn-outline: var(--btn-outline-dark);
-      --btn-bg: var(--btn-bg-dark);
-      --hover-bg: var(--hover-bg-dark);
-      transition: background-color 0.5s ease;
-      background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23767379' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
-    }
+@import url('themes.css');
 
 /* Reset */
 * {
@@ -436,28 +363,29 @@ textarea::selection {
 /* Media Queries */
 @media (max-width: 974px) {
   .header {
-    min-height: 50px;
+    height: 20vh;
     padding: 10px;
     width: auto;
   }
 
   .main {
-    height: auto;
+    height: 77vh;
     width: auto;
     padding: 10px;
     text-align: center;
-    box-sizing: content-box;
+    box-sizing: content-box; 
   }
 
   .textarea-container {
     display: flex;
     align-items: center;
     width: 100%;
+
   }
 
   .main__textArea { 
     width: 100%;
-    height: 25vh;
+    height: 35vh;
   }
 
   .main__btnGroup {
@@ -472,8 +400,10 @@ textarea::selection {
   }
 
   .footer {
-    position: fixed;
-    bottom: 0;
+    height: 3vh;
+    /* position: fixed; */
+    /* bottom: 0; */
+    align-items: center;
   }
 }
 
@@ -492,7 +422,7 @@ textarea::selection {
 .switch {
     cursor: pointer;
     position: fixed;
-    right: 5px;
+    right: 15px;
     top: 5px;
   }
   .switch input {
@@ -536,7 +466,7 @@ textarea::selection {
     transform: scale(0.92);
   }
   .switch input:checked + span {
-    background: var(--light-blue-dark);
+    background: var(--light-blue);
     box-shadow: 0 8px 16px -1px rgba(72, 234, 139, 0.2);
   }
   .switch input:checked + span:before {
