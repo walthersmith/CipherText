@@ -34,3 +34,12 @@
 *::-webkit-scrollbar-thumb:active {
   background-color: #BFA1FF;
 }
+
+.credits-link{
+  color: #e6edf3;
+  text-decoration: none;
+}
+.credits-link:hover{
+  color: #fa9988;
+  text-decoration: none;
+}
