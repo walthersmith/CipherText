@@ -74,6 +74,7 @@ h1 {
   border-radius: 24px;
   position: relative;
   color: var(--secondary-color);
+  resize: none;
 }
 
 .main__message {
