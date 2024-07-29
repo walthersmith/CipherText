@@ -27,6 +27,10 @@ function updateCharCount() {
     charCount.textContent = `${currentLength}`;
 }
 
+function hasNumbers(text) {
+    const numbersRegex = /[0-9]/;
+    return numbersRegex.test(text);
+}
 
 function hasSpecialCharacters(text) {
     const specialCharsRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
@@ -67,6 +71,10 @@ function downloadEncryptedText() {
 }
 
 function copyText() {
+    if (isEmpty(document.getElementById("txtMessage").value)) {
+        notification("notification",'🙂 There is nothing to copy.','showError');
+        return;
+    }
     var textarea = document.getElementById("txtMessage");    
     textarea.select();
     document.execCommand("copy");
@@ -89,6 +97,7 @@ export {isEmpty,
     hasSpecialCharacters,
     hasAccentedCharacters,
     hasUppercaseCharacters,
+    hasNumbers,
     copyText,
     clearText
  };

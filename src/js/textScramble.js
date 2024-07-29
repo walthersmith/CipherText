@@ -1,5 +1,5 @@
 import { encryptText, decryptText, encrypt, decrypt } from './cipherText.js';
-import { isEmpty,notification, hasSpecialCharacters, hasAccentedCharacters, hasUppercaseCharacters } from './utils.js';
+import { isEmpty,notification, hasSpecialCharacters, hasAccentedCharacters, hasUppercaseCharacters, hasNumbers } from './utils.js';
 
 class TextScramble {
     constructor(el) {
@@ -68,6 +68,10 @@ class TextScramble {
         }
         if(hasUppercaseCharacters(originalText)){
           notification("notification",'⚠️ Please enter letters in lowercase','showError');
+          return;
+        }
+        if(hasNumbers(originalText)){
+          notification("notification",'⚠️ Numbers are not allowed sorry 🫣','showError');
           return;
         }
         
