@@ -27,12 +27,20 @@ function updateCharCount() {
     charCount.textContent = `${currentLength}`;
 }
 
-function existSpecialCharacters(text){
-    return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(text);
+
+function hasSpecialCharacters(text) {
+    const specialCharsRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+    return specialCharsRegex.test(text);
 }
 
-function existAccentedCharacters(text) {
-    return /[áàâäãåāăąéèêëēĕėęěíìîïīįıóòôöõøōőœúùûüūůűųýÿŷÁÀÂÄÃÅĀĂĄÉÈÊËĒĔĖĘĚÍÌÎÏĪĮIÓÒÔÖÕØŌŐŒÚÙÛÜŪŮŰŲÝŸŶ]/.test(text);
+function hasAccentedCharacters(text) {
+    const accentedCharsRegex = /[À-ÿ]/;
+    return accentedCharsRegex.test(text);
+}
+
+function hasUppercaseCharacters(text) {
+    const uppercaseCharsRegex = /[A-Z]/;
+    return uppercaseCharsRegex.test(text);
 }
 
 
@@ -78,8 +86,9 @@ export {isEmpty,
     notification,
     updateCharCount,
     downloadEncryptedText,
-    existSpecialCharacters,
-    existAccentedCharacters,
+    hasSpecialCharacters,
+    hasAccentedCharacters,
+    hasUppercaseCharacters,
     copyText,
     clearText
  };

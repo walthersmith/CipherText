@@ -1,5 +1,5 @@
 import { encryptText, decryptText, encrypt, decrypt } from './cipherText.js';
-import { isEmpty,notification,existSpecialCharacters,existAccentedCharacters } from './utils.js';
+import { isEmpty,notification, hasSpecialCharacters, hasAccentedCharacters, hasUppercaseCharacters } from './utils.js';
 
 class TextScramble {
     constructor(el) {
@@ -58,12 +58,16 @@ class TextScramble {
       const originalText = this.el.value;
       let processedText;
       if(!isEmpty(originalText)){ 
-        if(existSpecialCharacters(originalText)){
+        if(hasSpecialCharacters(originalText)){
           notification("notification",'⚠️ Please enter only letters','showError');
           return;
         }
-        if(existAccentedCharacters(originalText)){
+        if(hasAccentedCharacters(originalText)){
           notification("notification",'⚠️ Please enter letters without accents','showError');
+          return;
+        }
+        if(hasUppercaseCharacters(originalText)){
+          notification("notification",'⚠️ Please enter letters in lowercase','showError');
           return;
         }
         
