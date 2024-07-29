@@ -15,11 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
     initTextScramble('txtMessage', 'btnEncrypt', 'btnDecrypt');
 });
 
-export function copyText() {
-    var textarea = document.getElementById("txtMessage");    
-    textarea.select();
-    document.execCommand("copy");
-    notification("notification",'Message copied ✅','showInfo');
-}
-
-window.copyText = copyText;

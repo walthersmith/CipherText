@@ -58,9 +58,28 @@ function downloadEncryptedText() {
     URL.revokeObjectURL(url);
 }
 
+function copyText() {
+    var textarea = document.getElementById("txtMessage");    
+    textarea.select();
+    document.execCommand("copy");
+    notification("notification",'Message copied ✅','showInfo');
+}
+
+function clearText() {
+    var textarea = document.getElementById("txtMessage");
+    textarea.value = "";
+    updateCharCount();
+}   
+
+window.copyText = copyText;
+window.clearText = clearText;
+
 export {isEmpty,
     notification,
     updateCharCount,
     downloadEncryptedText,
     existSpecialCharacters,
-    existAccentedCharacters };
+    existAccentedCharacters,
+    copyText,
+    clearText
+ };

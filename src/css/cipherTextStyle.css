@@ -105,14 +105,28 @@ h1 {
   background: var(--yellow);
   border: 2px solid var(--secondary-color);
   box-shadow: 2px 2px 0px var(--secondary-color);
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 8px; 
   cursor: pointer;
 }
 
 .copy-btn:hover {
     background: var(--pink);
 }
+.clean-btn{
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 5px 10px;
+  background: var(--yellow);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 2px 2px 0px var(--secondary-color);
+  border-radius: 8px; 
+  cursor: pointer;
+}
+.clean-btn:hover {
+  background: var(--pink);
+}
+
 
 .notification {
   position: fixed;
