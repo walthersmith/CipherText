@@ -410,10 +410,17 @@ textarea::selection {
   body {
     grid-auto-flow: column;
   }
+  .main{
+    height: 100%;
+  }
+  .switch{
+    position: sticky;
+    top: 10px;
+    right: 10px;
+  }
 
   .footer {
-    position: relative;
-    bottom: 0;
+    height: 100%;
   }
 }
 
