@@ -377,11 +377,18 @@ textarea::selection {
 }
 
 /* Media Queries */
-@media (max-width: 974px) {
+@media (max-width: 966px) {
   .header {
     height: 20vh;
     padding: 10px;
     width: auto;
+    font-size: 1.5rem;
+    color: red;
+    
+  }
+  
+  .header_title {
+    font-size: 3rem;
   }
 
   .main {
@@ -425,6 +432,7 @@ textarea::selection {
   body {
     grid-auto-flow: column;
   }
+  
   .main{
     height: 100%;
   }
@@ -440,14 +448,19 @@ textarea::selection {
 }
 
 @media (max-width: 375px) {
+
   .header_title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .main {
     padding: 0;
   }
   .textarea-container{
     width: 95%;
+  }
+  .smile {
+    width: 50%;
+    height: 50%;
   }
 }
 
