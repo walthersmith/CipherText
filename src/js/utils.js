@@ -38,7 +38,7 @@ function hasSpecialCharacters(text) {
 }
 
 function hasAccentedCharacters(text) {
-    const accentedCharsRegex = /[À-ÿ]/;
+    const accentedCharsRegex = /[À-ÿ[^Ññ]]/;
     return accentedCharsRegex.test(text);
 }
 
