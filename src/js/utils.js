@@ -87,6 +87,17 @@ function clearText() {
     updateCharCount();
 }   
 
+function playEncryptionSound() {
+    var audio = new Audio('src/assets/audio/sounds/Padlock.mp3');
+    audio.volume = 0.1;
+    audio.play();
+}
+function playDencryptionSound() {
+    var audio = new Audio('src/assets/audio/sounds/Padlock_Unlock.mp3');
+    audio.volume = 0.1;
+    audio.play();
+}
+
 window.copyText = copyText;
 window.clearText = clearText;
 
@@ -99,5 +110,7 @@ export {isEmpty,
     hasUppercaseCharacters,
     hasNumbers,
     copyText,
-    clearText
+    clearText,
+    playEncryptionSound,
+    playDencryptionSound
  };

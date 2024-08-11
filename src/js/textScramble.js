@@ -1,5 +1,5 @@
 import { encryptText, decryptText, encrypt, decrypt } from './cipherText.js';
-import { isEmpty,notification, hasSpecialCharacters, hasAccentedCharacters, hasUppercaseCharacters, hasNumbers } from './utils.js';
+import { isEmpty,notification, hasSpecialCharacters, hasAccentedCharacters, hasUppercaseCharacters, hasNumbers,playEncryptionSound, playDencryptionSound } from './utils.js';
 
 class TextScramble {
     constructor(el) {
@@ -85,9 +85,11 @@ class TextScramble {
 
           if (isEncrypt) {
               encryptText(); 
+              playEncryptionSound();
               processedText = this.el.value;
           } else {
               decryptText(); 
+              playDencryptionSound();
               processedText = this.el.value;
           }    
           await this.setText('_'.repeat(originalText.length));
