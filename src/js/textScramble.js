@@ -84,11 +84,17 @@ class TextScramble {
           decryptButton.disabled = true;
 
           if (isEncrypt) {
-              encryptText(); 
+              await new Promise((resolve, reject) => {
+                  encryptText();                   
+                  resolve();
+              });
               playEncryptionSound();
               processedText = this.el.value;
           } else {
+            await new Promise((resolve, reject) => {
               decryptText(); 
+              resolve();              
+            })
               playDencryptionSound();
               processedText = this.el.value;
           }    
