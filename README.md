@@ -20,7 +20,6 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 - [✅] Dark mode
 - [✅] Copy Button
 - [✅] Clean Button
-- [ ] Share encrypted/decrypted text
 
 
 ## Live Demo
