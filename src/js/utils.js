@@ -33,7 +33,7 @@ function hasNumbers(text) {
 }
 
 function hasSpecialCharacters(text) {
-    const specialCharsRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+    const specialCharsRegex = /[^a-z ]/;
     return specialCharsRegex.test(text);
 }
 

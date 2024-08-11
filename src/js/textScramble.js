@@ -58,10 +58,7 @@ class TextScramble {
       const originalText = this.el.value;
       let processedText;
       if(!isEmpty(originalText)){ 
-        if(hasSpecialCharacters(originalText)){
-          notification("notification",'⚠️ Please enter only letters','showError');
-          return;
-        }
+        
         if(hasAccentedCharacters(originalText)){
           notification("notification",'⚠️ Please enter letters without accents','showError');
           return;
@@ -72,6 +69,11 @@ class TextScramble {
         }
         if(hasNumbers(originalText)){
           notification("notification",'⚠️ Numbers are not allowed sorry 🫣','showError');
+          return;
+        }
+
+        if(hasSpecialCharacters(originalText)){
+          notification("notification",'⚠️ Please enter only letters','showError');
           return;
         }
         
