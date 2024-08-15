@@ -584,3 +584,7 @@ textarea::selection {
   *:before, *:after {
     box-sizing: border-box;
   }
+
+.footer__logos{
+  gap: 3px;
+}
