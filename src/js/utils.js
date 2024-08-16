@@ -101,6 +101,50 @@ function playDencryptionSound() {
 window.copyText = copyText;
 window.clearText = clearText;
 
+const svg = document.getElementById('smileyFace');
+const elements = svg.querySelectorAll('circle, path');
+
+// Almacenar los colores originales
+const originalColors = Array.from(elements).map(el => ({
+  element: el,
+  fill: el.getAttribute('fill')
+}));
+
+function getRandomPastelColor() {
+  const hue = Math.floor(Math.random() * 360);
+  return `hsl(${hue}, 100%, 80%)`;
+}
+
+function changeColors() {
+  elements.forEach(el => {
+    if (el.getAttribute('fill') !== 'none') {
+      el.setAttribute('fill', getRandomPastelColor());
+    }
+  });
+}
+
+function restoreColors() {
+  originalColors.forEach(item => {
+    item.element.setAttribute('fill', item.fill);
+  });
+}
+
+let intervalId;
+
+svg.addEventListener('mouseenter', () => {
+  intervalId = setInterval(changeColors, 30);
+});
+
+svg.addEventListener('mouseleave', () => {
+  clearInterval(intervalId);
+  restoreColors();
+});
+
+
+
+
+
+
 export {isEmpty,
     notification,
     updateCharCount,
