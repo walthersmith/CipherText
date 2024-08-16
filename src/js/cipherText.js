@@ -63,24 +63,13 @@ function cipherRules(letter){
 }
 
 /*    DECYPHER  RUTINE
- */
-function decrypt(word){    
-    let encryptedWord = Array.from(word)
-    let rules = {'enter':"e",'imes':'i','ai':'a','ober':'o','ufat':'u'};
-    Object.entries(rules).forEach(([key, value]) => { 
-        // word = word.replace(RegExp(key,'g'),value);
-        let position = 0;
-        while(true){
-            let subArray = encryptedWord.slice(position).join('');
-            let index = subArray.indexOf(key);
-            if(index ===-1)break; 
-            position+=index; 
-            encryptedWord.splice(position,key.length,value);
-            position += value.length;
-        }
-    });
-
-    return encryptedWord.join('');
+ */function decrypt(text) {
+    const rules = { 'enter': 'e', 'imes': 'i', 'ai': 'a', 'ober': 'o', 'ufat': 'u' };
+    const pattern = new RegExp(Object.keys(rules).join('|'), 'g');
+    return (function recursiveDecrypt(input) {
+        const decrypted = input.replace(pattern, match => rules[match]);
+        return decrypted === input ? decrypted : recursiveDecrypt(decrypted);
+    })(text);
 }
  
 export { encryptText, decryptText, encrypt, decrypt };
