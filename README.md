@@ -6,7 +6,6 @@ Welcome to CipherText! 🎉 This is a web application for encrypting and decrypt
 ## Features ✨
 - **Encrypt and decrypt texts** 🔒🔓: Convert your messages into secret code and back to normal text.
 - **Share text** 🔗: Send your encrypted text to friends.
-- **Generate keys** 🔑: Automatically create encryption keys.
 - **Dark mode** 🌙: Switch between light and dark mode. 
 - **Download files** 📂: Save your texts as files.
 - **Mobile compatibility** 📱: Works seamlessly on mobile devices. 
