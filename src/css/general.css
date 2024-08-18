@@ -69,3 +69,31 @@
 #coolMessage {
   animation: popIn 0.3s ease-out;
 }
+
+.lang_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;  
+  align-content: baseline;
+  font-size: 1rem;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+}
+.btn__lang { 
+  position: relative;
+  text-decoration: none;
+  cursor: pointer; 
+  color: var(--deactivate);
+}
+
+.btn__lang:hover{
+  color: var(--secondary-color);
+}
+.selected{
+  color: var(--secondary-color);
+}
+
+
+
