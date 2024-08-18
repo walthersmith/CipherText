@@ -138,7 +138,7 @@ h1 {
   color: var(--secondary-color);
   resize: none;
   transition: all 0.3s ease;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .main__message {
