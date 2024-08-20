@@ -53,6 +53,7 @@ async function changeLang(language) {
       document.getElementById('btnEs').classList.remove('selected'); 
       document.getElementById('btnEn').classList.add('selected'); 
   }
+  localStorage.setItem('lang', language);
 
   for (const [key, text] of Object.entries(translations[sourceLanguage])) {
       if (!translations[targetLanguage][key]) {
@@ -70,4 +71,4 @@ async function changeLang(language) {
   }
 }
 
-export {changeLang, initializeTranslations};
+export {changeLang, initializeTranslations,translate};

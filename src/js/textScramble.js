@@ -60,20 +60,20 @@ class TextScramble {
       if(!isEmpty(originalText)){ 
         
         if(hasAccentedCharacters(originalText)){
-          notification("notification",'⚠️ Please enter letters without accents','showError');
+          notification("notification",'❕ Please enter letters without accents','showError');
           return;
         }
         if(hasUppercaseCharacters(originalText)){
-          notification("notification",'⚠️ Please enter letters in lowercase','showError');
+          notification("notification",'❕ Please enter letters in lowercase','showError');
           return;
         }
         if(hasNumbers(originalText)){
-          notification("notification",'⚠️ Numbers are not allowed sorry 🫣','showError');
+          notification("notification",'❕ Numbers are not allowed sorry 🫣','showError');
           return;
         }
 
         if(hasSpecialCharacters(originalText)){
-          notification("notification",'⚠️ Please enter only letters','showError');
+          notification("notification",'❕ Please enter only letters','showError');
           return;
         }
         
@@ -108,7 +108,7 @@ class TextScramble {
           encryptButton.disabled = false;
           decryptButton.disabled = false;
       } else {
-          notification("notification",'⚠️ Please enter some text','showError');
+          notification("notification",'😱 Please enter some text','showError');
       }
   }
  

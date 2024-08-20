@@ -4,13 +4,19 @@
  * @date 2024-07-11
  * @license MIT License
  */
+import {translate} from './translator.js'
+
 
 function isEmpty(text){
     return text.trim() == ''? true : false;
 }
 
-function notification(elementId,message,classNotif){
+async function notification(elementId,message,classNotif){
     var notification = document.getElementById(elementId);
+    //translation
+    let lang = localStorage.getItem('lang'); 
+    message = await translate(message, lang);
+
     notification.textContent =  message;
     notification.classList.add(classNotif);
     setTimeout(function() {
@@ -54,7 +60,7 @@ function downloadEncryptedText() {
     const text = textarea.value;
     
     if (text.trim() === '') {
-        notification("notification",'⚠️ Please encrypt/decrypt some text before downloading.','showError');
+        notification("notification",'❗ Please encrypt/decrypt some text before downloading.','showError');
         return;
     }
 

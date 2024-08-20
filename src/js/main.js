@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeTranslations()
     btnEs.addEventListener('click', function() {changeLang('es');});
     btnEn.addEventListener('click', function() {changeLang('en');});
+    localStorage.setItem('lang', 'en');
 
     initTextScramble('txtMessage', 'btnEncrypt', 'btnDecrypt');
 });
