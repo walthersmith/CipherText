@@ -166,7 +166,7 @@ h1 {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 5px 10px;
+  padding: 2px 5px;
   background: var(--yellow);
   border: 2px solid var(--secondary-color);
   box-shadow: 2px 2px 0px var(--secondary-color);
@@ -181,7 +181,7 @@ h1 {
   position: absolute;
   top: 60px;
   right: 10px;
-  padding: 5px 10px;
+  padding: 2px 5px;
   background: var(--yellow);
   border: 2px solid var(--secondary-color);
   box-shadow: 2px 2px 0px var(--secondary-color);
